@@ -3,11 +3,5 @@ local success, err = pcall(function()
 end)
 
 if not success then
-    game:Shutdown()
-    wait()
-    game:GetService("StarterGui"):SetCore("SendNotification", {
-        Title = "Error",
-        Text = "Failed to load script: " .. tostring(err),
-        Duration = 5
-    })
+    warn("Failed to load script: " .. tostring(err))
 end
